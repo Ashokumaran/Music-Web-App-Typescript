@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Work+Sans&display=swap');
+
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+
+body{
+    background-image: url("backdrop.png");
+    background-repeat: repeat,repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+
+.main{
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.main h1{
+	display: flex;
+  width: 150%;
+  height: 35%;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 5rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin: 80px 0 0 550px !important;
+  line-height: 5.3rem;
+}
+.main h1 div{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	height: 65px;
+	z-index: -1;
+	color: white;
+	overflow: hidden;
+	text-align: center;
+}
+.main h1 div::before{
+	content: '';
+	height: 100%;
+	width: 100%;
+}
+@keyframes animatebefore{
+	0%{
+		left:-100%;
+		background:#fff;
+	}
+	100%{
+		left: 100%;
+	}
+}
+.main h1 div ul{
+	margin:0 0.5%;
+	padding:0;
+	width: auto;
+	text-align: left;
+	animation:newani 6s linear infinite;
+
+}
+
+@keyframes newani{
+	0%{
+		transform: translateY(-130px);
+	}
+	30%{
+		transform: translateY(-65px);
+	}
+	40%{
+		transform: translateY(-65px);
+	}
+	65%{
+		transform: translateY(0px);	
+	}
+	75%,100%{
+		transform: translateY(0px);	
+	}
+}
+.main h1 div ul li{
+	list-style-type: none;
+	height: 68px;
+	width: auto;
+}
+
+
+/*
+.main{
+  height: auto;
+	margin:auto auto;
+	transform: translate(-50%,-50%);
+}
+.main h1{
+color: white;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 5rem;
+font-weight: bolder;
+letter-spacing: 5px;
+display: flex;
+}
+
+*/
+
+
+.type-card{
+  border-radius: 15px !important;
+  background-color: white;
+  opacity: 60%;
+}
+
+.type-card:hover{
+  cursor: pointer;
+  opacity: 80%;
+}
+.nav-padding-pink{
+  color: rgb(226, 44, 90);
+  font-size: 13px !important;
+  font-family: 'Work Sans', sans-serif !important;
+  padding: 5px 8px 5px 8px !important;
+}
+.nav-padding-pink:hover{
+  color: rgb(46, 46, 46);
+}
+.nav-padding-blue{
+  color: rgb(20, 89, 134);
+  font-size: 13px !important;
+  font-family: 'Work Sans', sans-serif !important;
+  padding: 5px 8px 5px 8px !important;
+}
+.nav-padding-blue:hover{
+  color: rgb(46, 46, 46);
+}
+.margin-right-container{
+margin-right: 0px !important;
+padding-right: 0px;
+}
+.margin-right-card{
+  margin-right: -6px !important;
+}
+.type-card-center{
+  opacity: 72%;
+}
+.card{
+  height: 100%;
+}
+
+.audio-playlist{
+  height:300px;
+  width: 350px !important;
+}
+.music-player{
+  height:450px;
+}
+.search-audio{
+  height:350px;
+}
+
+#songs-fetch, #artists-fetch, #albums-fetch{
+  padding: 0 3px 3px 3px ;
+  margin: 10px 0 0 0 ;
+  border-radius: 5px;
+  border: 1px solid rgb(146, 24, 95);
+  height: 88%;
+}
+
+#playlist-fetch, #myPlaylist-fetch{
+  padding: 0 3px 3px 3px ;
+  margin: 10px 0 0 0 ;
+  border-radius: 5px;
+  border: 1px solid rgb(3, 64, 143);
+  height: 88%;
+}
+
+audio{
+  width: 620px !important;
+  border-radius: 10px;
+}
+
+.icon-left{
+  position: absolute;
+  top:40%;
+  left:25px;
+  font-size: 75px !important;
+}
+.icon-right{
+  position: absolute;
+  top:40%;
+  right:25px;
+  font-size: 75px !important;
+}
+.icon-left:hover{
+  position: absolute;
+  top:38%;
+  left:22px;
+  color: rgb(226, 44, 90);
+  font-size: 90px !important;
+}
+.icon-right:hover{
+  position: absolute;
+  top:38%;
+  right:22px;
+  color: rgb(20, 89, 134);
+  font-size: 90px !important;
+
+}
+.seeker{
+  position: absolute;
+  bottom: 8px;
+}
+
+.current-info:hover{
+  color: rgb(226, 44, 90);
+}
+
+@media only screen and (max-width: 1350px) {
+  audio{
+    width: 600px !important;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  audio{
+    width: 580px !important;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  audio{
+    width: 560px !important;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  audio{
+    width: 500px !important;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 370px !important;
+  }  
+  audio{
+    width: 440px !important;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 330px !important;
+  }  
+}
+
+@media only screen and (max-width: 1000px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 300px !important;
+  } 
+  audio{
+    width: 400px !important;
+    border-radius: 10px;
+  } 
+}
+
+@media only screen and (max-width: 991px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 260px !important;
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+
+  } 
+audio{
+  width: 700px !important;
+  border-radius: 10px;
+} 
+}
+
+@media only screen and (max-width: 900px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 240px !important;
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+
+  }  
+}
+@media only screen and (max-width: 850px) {
+  .main h1{
+    display: flex;
+    width: 180%;
+    height: 35%;
+    margin: 80px 0 0 230px !important;
+    font-size: 4rem;
+    line-height: 3.8rem;
+
+  }  
+}
+@media only screen and (max-width: 800px) {
+  .main h1{
+    display: flex;
+    width: 200%;
+    height: 35%;
+    margin: 80px 0 0 240px !important;
+        font-size: 3.4rem;
+    line-height: 3.2rem;
+  }  
+  audio{
+    width: 600px !important;
+    border-radius: 10px;
+  } 
+}
+@media only screen and (max-width: 700px) {
+  .main h1{
+    display: flex;
+    width: 200%;
+    height: 35%;
+    margin: 80px 0 0 200px !important;
+    font-size: 3rem;
+    line-height: 2.8rem;
+
+  }  
+  audio{
+  width: 500px !important;
+  border-radius: 10px;
+} 
+}
+@media only screen and (max-width: 600px) {
+  .main h1{
+    display: flex;
+    width: 200%;
+    height: 40%;
+    margin: 60px 0 0 180px !important;
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+  } 
+  .main h1 div{
+    margin: 0;
+    height: 110%;
+    width: 100%;
+    height: 30px;
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+  }
+audio{
+  width: 430px !important;
+  border-radius: 10px;
+} 
+}
+@media only screen and (max-width: 550px) {
+  .main h1{
+    display: flex;
+    width: 200%;
+    height: 40%;
+    margin: 60px 0 0 140px !important;
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+  } 
+  .main h1 div{
+    margin: 0;
+    height: 110%;
+    width: 100%;
+    height: 30px;
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main h1{
+    display: flex;
+    width: 220%;
+    height: 20%;
+    margin: 50px 0 0 140px !important;
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }  
+  .main h1 div{
+    margin: 0;
+    height: 110%;
+    width: 100%;
+    height: 30px;
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+  }
+  .type-card{
+margin-bottom: 20px !important;  }
+audio{
+  width: 320px !important;
+  border-radius: 10px;
+} 
+}
+.btn{
+background-color:rgb(3, 64, 143) !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .main h1{
+    display: flex;
+    width: 220%;
+    height: 20%;
+    margin: 30px 0 0 75px !important;
+    font-size: 1.9rem;
+    line-height: 2rem;
+
+  }  
+  .main h1 div{
+    margin: 0;
+    height: 110%;
+    width: 100%;
+    height: 40px;
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+  }
+  audio{
+    width: 280px !important;
+    border-radius: 10px;
+  } 
+}
