@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Varta:wght@600&family=Volkhov:wght@700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shorcut icon" href="logo.png">
+        <title>MusiQ - For you</title>
+    </head></head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="main">
+                <h1>MUSIQ-
+                    <div>
+                        <ul>
+                            <li>ANYWHERE</li>
+                            <li>ANYTIME</li>
+                            <li>ANYWHERE</li>
+                        </ul>
+                    </div>
+                </h1>
+            </div>
+            </div>
+                <div class="mt-4 row container-fluid margin-right-container d-flex">
+                    <div class="mt-lg-5 mt-3 col-lg-3 order-lg-0 order-1">
+                        <div class="card type-card border-light search-audio">
+                            <div class="card-body">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                      <a class="nav-padding-pink nav-link active" id="songs-fetch-tab" data-toggle="tab" href="#songs-fetch" role="tab">Songs</a>
+                                      <a class="nav-padding-pink nav-link" id="artists-fetch-tab" data-toggle="tab" href="#artists-fetch" role="tab">Artist</a>
+                                      <a class="nav-padding-pink nav-link" id="albums-fetch-tab" data-toggle="tab" href="#albums-fetch" role="tab">Albums</a>
+                                    </div>
+                                </nav>  
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active overflow-auto" id="songs-fetch">
+                                    </div> 
+                                    <div role="tabpanel" class="tab-pane overflow-auto" id="artists-fetch">
+                                    </div> 
+                                    <div role="tabpanel" class="tab-pane overflow-auto" id="albums-fetch">
+                                    </div>   
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-6 margin-right-card order-lg-1 order-0">
+                        <div class="card type-card type-card-center border-light music-player">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Now Playing</h5>
+                                <div class="current-song d-flex flex-column align-content-center flex-wrap">
+                                    <div class="current-info">
+                                        <h1>kumbali trance</h1>
+                                    </div>
+                                    <div>
+                                        <i class="icon-left fa fa-caret-left"></i>
+                                        <i class="icon-right fa fa-caret-right"></i>
+                                    </div>
+                                    <div class="seeker">
+                                        <audio controls>
+                                            <source src="trance.mp3" type="audio/mp3">
+                                        </audio>    
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="ml-1 mt-3 mt-lg-5 col-lg-3 order-lg-2 order-3">
+                        <div class="card type-card border-light search-audio">
+                            <div class="card-body">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-padding-blue nav-link active" id="playlist-fetch-tab" data-toggle="tab" href="#playlist-fetch" role="tab">Playlist</a>
+                                        <a class="nav-padding-blue nav-link" id="myPlaylist-fetch-tab" data-toggle="tab" href="#myPlaylist-fetch" role="tab">My Playlist</a>
+                                    </div>
+                                </nav>  
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active overflow-auto" id="playlist-fetch">
+                                    </div> 
+                                    <div role="tabpanel" class="tab-pane" id="myPlaylist-fetch">
+                                        <button type="button" class="btn btn-block btn-primary btn-sm mt-1"><strong>+</strong>New</button>
+                                    </div> 
+                                    <div class="overflow-auto" id="custom-playlist"></div>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
