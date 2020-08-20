@@ -14,7 +14,7 @@
         <link rel="shorcut icon" href="logo.png">
         <title>MusiQ - For you</title>
     </head></head>
-<body>
+<body onload="getToken()">
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
@@ -32,23 +32,56 @@
             </div>
                 <div class="mt-4 row container-fluid margin-right-container d-flex">
                     <div class="mt-lg-5 mt-3 col-lg-3 order-lg-0 order-1">
-                        <div class="card type-card border-light search-audio">
-                            <div class="card-body">
-                                <nav>
+                        <div class="card type-card border-light search-audio" style="padding-bottom: 30px;">
+                            <div class="card-body" style="padding-top: 5px;">
+                              <!--  <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                       <a class="nav-padding-pink nav-link active" id="songs-fetch-tab" data-toggle="tab" href="#songs-fetch" role="tab">Songs</a>
                                       <a class="nav-padding-pink nav-link" id="artists-fetch-tab" data-toggle="tab" href="#artists-fetch" role="tab">Artist</a>
                                       <a class="nav-padding-pink nav-link" id="albums-fetch-tab" data-toggle="tab" href="#albums-fetch" role="tab">Albums</a>
                                     </div>
-                                </nav>  
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active overflow-auto" id="songs-fetch">
-                                    </div> 
-                                    <div role="tabpanel" class="tab-pane overflow-auto" id="artists-fetch">
-                                    </div> 
-                                    <div role="tabpanel" class="tab-pane overflow-auto" id="albums-fetch">
-                                    </div>   
-                                </div>
+                                </nav>   -->
+                                <form id="form">
+                                    <div class="row d-flex justify-content-around">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="select" id="genreId" value="genre">
+                                            <label class="form-check-label" for="genreId">
+                                              Genre
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="select" id="artistsId" value="artist">
+                                            <label class="form-check-label" for="artistsId">
+                                              Artists
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-4 form-group px-2">
+                                            <select name="folder" id="folder" class="form-control form-control-sm" required>
+                                                <option>Select</option>                    
+                                            </select>
+                                        </div>
+                                        <div class="col-4 form-group px-2">
+                                            <select name="sub-folder" id="sub-folder" class="form-control form-control-sm" required>
+                                                <option>Albums</option>                    
+                                            </select>
+                                        </div>
+                                        <div class="col-4 form-group" style="padding-left: 0px;">
+                                        <button class="btn btn-pink form-control-sm" type="submit">Submit</button>                                </div>
+                                        </div>
+                                    </form>
+                                    <div class="row results-songs-fetch" id="songs-fetch">
+                                        <div class="col-sm-6 px-0 overflow-auto">
+                                            <div class="list-group song-list">
+                                                
+                                            </div>                                             
+                                        </div>
+                                    </div>
+                               <!-- <div class="results-songs-fetch">
+                                    <div class="overflow-auto" id="songs-fetch">
+                                    </div>    
+                                </div> -->
                             </div>
                           </div>
                     </div>
@@ -58,7 +91,7 @@
                                 <h5 class="card-title">Now Playing</h5>
                                 <div class="current-song d-flex flex-column align-content-center flex-wrap">
                                     <div class="current-info">
-                                        <h1>kumbali trance</h1>
+                                        <h1>Title Goes Here</h1>
                                     </div>
                                     <div>
                                         <i class="icon-left fa fa-caret-left"></i>
@@ -78,15 +111,20 @@
                             <div class="card-body">
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <a class="nav-padding-blue nav-link active" id="playlist-fetch-tab" data-toggle="tab" href="#playlist-fetch" role="tab">Playlist</a>
-                                        <a class="nav-padding-blue nav-link" id="myPlaylist-fetch-tab" data-toggle="tab" href="#myPlaylist-fetch" role="tab">My Playlist</a>
+                                        <a class="nav-padding-blue nav-link active" id="playlist-fetch-tab" data-toggle="tab" href="#playlist-fetch" role="tab">Add Songs</a>
+                                        <a class="nav-padding-blue nav-link" id="myPlaylist-fetch-tab" data-toggle="tab" href="#myPlaylist-fetch" role="tab">Playlist</a>
                                     </div>
                                 </nav>  
                                 <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active overflow-auto" id="playlist-fetch">
+                                    <div role="tabpanel" class="row tab-pane active overflow-auto" id="playlist-fetch">
+                                        <div class="d-flex flex-row-reverse">
+                                            <button type="button" class="btn align-items-right btn-primary btn-sm mt-1 btn-blue"><strong>+</strong>New Song</button>
+                                        </div>
                                     </div> 
                                     <div role="tabpanel" class="tab-pane" id="myPlaylist-fetch">
-                                        <button type="button" class="btn btn-block btn-primary btn-sm mt-1"><strong>+</strong>New</button>
+                                        <div class="d-flex flex-row-reverse">
+                                            <button type="button" class="btn align-items-right btn-primary btn-sm mt-1 btn-blue"><strong>+</strong>New Playlist</button>
+                                        </div>
                                     </div> 
                                     <div class="overflow-auto" id="custom-playlist"></div>
                                 </div>

@@ -155,9 +155,13 @@ padding-right: 0px;
   height:350px;
 }
 
-#songs-fetch, #artists-fetch, #albums-fetch{
+.custom-select{
+  height: 100% !important;
+}
+
+#songs-fetch{
   padding: 0 3px 3px 3px ;
-  margin: 10px 0 0 0 ;
+  margin: -20px 0 0 0 ;
   border-radius: 5px;
   border: 1px solid rgb(146, 24, 95);
   height: 88%;
@@ -223,6 +227,11 @@ audio{
     width: 580px !important;
     border-radius: 10px;
   }
+  .btn-pink{
+    height: 30px !important;
+    width: 40px !important;
+    }
+
 }
 @media only screen and (max-width: 1250px) {
   audio{
@@ -255,6 +264,7 @@ audio{
     height: 35%;
     margin: 80px 0 0 330px !important;
   }  
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -285,7 +295,18 @@ audio{
   border-radius: 10px;
 } 
 }
-
+.btn-pink{
+  background-color: rgb(226, 44, 90) !important;
+  color: white !important;
+  border: 1px solid white !important;
+  padding:3px 5px 3px 5px !important;
+  width: 100%;
+}
+.btn-pink:hover{
+  color:rgb(226, 44, 90) !important;
+  background-color: white !important;
+  border: 1px solid rgb(226, 44, 90) !important;
+}
 @media only screen and (max-width: 900px) {
   .main h1{
     display: flex;
@@ -407,7 +428,7 @@ audio{
   border-radius: 10px;
 } 
 }
-.btn{
+.btn-blue{
 background-color:rgb(3, 64, 143) !important;
 }
 
